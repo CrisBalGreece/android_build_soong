@@ -47,6 +47,7 @@ var (
 		"build/bazel/examples/apex/minimal":                  Bp2BuildDefaultTrueRecursively,
 		"build/make/tools/signapk":                           Bp2BuildDefaultTrue,
 		"build/make/target/product/security":                 Bp2BuildDefaultTrue,
+		"vendor/lineage/signing/keys":                        Bp2BuildDefaultTrue,
 		"build/soong":                                        Bp2BuildDefaultTrue,
 		"build/soong/cc/libbuildversion":                     Bp2BuildDefaultTrue, // Skip tests subdir
 		"build/soong/cc/ndkstubgen":                          Bp2BuildDefaultTrue,
@@ -206,6 +207,7 @@ var (
 		"build/bazel_common_rules":/* recursive = */ true,
 		// build/make/tools/signapk BUILD file is generated, so build/make/tools is not recursive.
 		"build/make/tools":/* recursive = */ false,
+		"vendor/lineage/signing/keys":/* recursive = */ false,
 		"build/pesto":/* recursive = */ true,
 
 		// external/bazelbuild-rules_android/... is needed by mixed builds, otherwise mixed builds analysis fails
